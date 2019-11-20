@@ -7,15 +7,15 @@ class Artist
   @@artists = []
 
   extend Memorable::ClassMethods
-
+  extend Findable::ClassMethods
   def initialize
     @@artists << self
     @songs = []
   end
 
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+  # def self.find_by_name(name)
+  #   @@artists.detect{|a| a.name == name}
+  # end
 
   def self.all
     @@artists
