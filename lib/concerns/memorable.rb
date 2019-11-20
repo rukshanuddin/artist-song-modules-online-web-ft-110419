@@ -12,7 +12,7 @@ module Memorable
   module InstanceMethods
     def initialize
       self.class.all << self
-      @songs = []
+      @songs = [] if self.class == Artist
     end
   end
 
